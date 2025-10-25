@@ -53,6 +53,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /var/www/nginx
+            cd /var/www/react-nginx
             docker compose down
             docker compose up -d --build
+
