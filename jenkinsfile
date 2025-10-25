@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/DenisLeonte/open-sky-data-analytics-frontend',
+                    url: 'https://github.com/DenisLeonte/open-sky-data-analytics-frontend.git',
                     credentialsId: 'github-credentials'
             }
         }
