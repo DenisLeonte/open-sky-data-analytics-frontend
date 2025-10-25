@@ -24,7 +24,7 @@ The repository includes a GitHub Actions workflow that automatically deploys the
 2. Open a Pull Request targeting `main`.
 3. After review, merge the PR into `main`.
 4. GitHub Actions triggers:
-   - Installs dependencies (`npm ci`)
+   - Installs dependencies (`npm i`)
    - Builds the production app (`npm run build`)
    - Deploys the `dist/` folder to the remote server using SSH/SCP
    - Restarts the Nginx Docker container hosting the app
@@ -67,7 +67,7 @@ cd your-repo
 2. Install dependencies:
 
 ```bash
-npm ci
+npm i
 ```
 
 3. Start development server:
@@ -108,6 +108,7 @@ This will create a `dist/` folder ready to be served by Nginx or any static serv
   - Copying `dist/` to `/var/www/react-app/dist` on the server
   - Restarting the Docker container hosting the app
 - Manual deployment can also be done by copying the `dist/` folder and restarting the container.
+- In order to avoid issues, please run `npm run build` before pushing to check if it actually compliles
 
 ### Deployment Flow Diagram
 
